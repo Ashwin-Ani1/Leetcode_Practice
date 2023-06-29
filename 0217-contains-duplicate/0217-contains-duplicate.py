@@ -1,6 +1,6 @@
 class Solution(object):
     def containsDuplicate(self, nums):
-        """
+    
         #first sorted the array in order because I want to compare the values side by side
         nums.sort()
         #Had to do len(nums)-1 since I will get an error for a greater length
@@ -9,9 +9,9 @@ class Solution(object):
             if nums[i] == nums[i + 1]:
                 return True
         #time O(nlogn) due to sorting and space O(1)    
-        """    
+  
             
-        #"""
+        """
         #More efficient code that is timeCO{O(n)} Space O(n) 
         hashset = set()
         for n in nums:
@@ -20,5 +20,5 @@ class Solution(object):
             hashset.add(n)
         return False
         
-        #"""
+        """
         
