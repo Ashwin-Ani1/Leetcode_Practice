@@ -4,7 +4,8 @@ class Solution(object):
         :type s: str
         :type t: str
         :rtype: bool
-        
+        """
+        """
         #time and space complexity o(N) or o(s+t) since we are looping through both strings
         if len(s) != len(t):  #base case to check if they have the same # in total
             return False
@@ -21,7 +22,11 @@ class Solution(object):
         
         return True    
         """
-        return Counter(s) == Counter(t)
+        #Solution in an O(1) memory nothing really stored so you can sort and compare the only issue is time complexity can increase since sorting 
+        
+        return sorted(str(s))  == sorted(str(t))
+        
+        # return Counter(s) == Counter(t) Fast one line solution data structure that is a hashmap that counts what was done exactly 
          
             
             
