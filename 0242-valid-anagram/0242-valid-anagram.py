@@ -4,7 +4,8 @@ class Solution(object):
         :type s: str
         :type t: str
         :rtype: bool
-        """
+        
+        #time and space complexity o(N) or o(s+t) since we are looping through both strings
         if len(s) != len(t):  #base case to check if they have the same # in total
             return False
         
@@ -18,5 +19,11 @@ class Solution(object):
             if countS[c] != countT.get(c,0):
                 return False
         
-        return True        
+        return True    
+        """
+        return Counter(s) == Counter(t)
+         
+            
+            
+            
             
