@@ -5,15 +5,18 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        if len(s) != len(t):
+        if len(s) != len(t):  #base case to check if they have the same # in total
             return False
-        char_count = [0] * 26
-    
+        
+        countS, countT = {},{} # Two hashmaps that can keep track of the count of var
+        
         for i in range(len(s)):
-            char_count[ord(s[i]) - ord('a')] += 1
-            char_count[ord(t[i]) - ord('a')] -= 1
-    
-        for count in char_count:
-            if count != 0:
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0) # can be done since same length
+            
+        for c in countS:
+            if countS[c] != countT.get(c,0):
                 return False
-        return True
+        
+        return True        
+            
