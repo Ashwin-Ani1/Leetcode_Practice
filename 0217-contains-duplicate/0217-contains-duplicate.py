@@ -4,14 +4,20 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        
+        """
         nums.sort()
         for i in range (len(nums) -1):
             if(nums[i] == nums[i+1]):
                 return True
         return False
-        
-        
+        """
+        hashset = set()
+        for i in range (len(nums)):
+            if nums[i] in hashset:
+                return True
+            else:
+                hashset.add(nums[i])
+        return False
         
         
         
