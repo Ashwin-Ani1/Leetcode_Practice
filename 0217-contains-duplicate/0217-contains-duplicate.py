@@ -5,17 +5,6 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        hashset = set()
-        for n in nums:
-            if n in hashset:
-                return True
-            else:
-                hashset.add(n)
-        return False
-    
-    
-    
-    
     
         """
         
@@ -29,11 +18,11 @@ class Solution(object):
         
         # More efficient code that is timeCO{O(n)} Space O(n)
                 #first sorted the array in order because I want to compare the values side by side
+        """
         hashset = set()
         for n in nums:
             if n in hashset:
                 return True
             hashset.add(n)
         return False
-        
-        """
+    
