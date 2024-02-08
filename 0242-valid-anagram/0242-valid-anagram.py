@@ -5,21 +5,65 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        
-        return sorted(s) == sorted(t)
-        """
+
         if len(s) != len(t):
-            return False
-        s_hash,t_hash = {},{}
-        
-        for i in range(len(s)):
-            s_hash[s[i]] = 1 + s_hash.get(s[i],0)
-            t_hash[t[i]] = 1 + t_hash.get(t[i],0)
-        
-        for i in s_hash:
-            if s_hash[i] != t_hash.get(i,0):
+            return False 
+        hmS,hmT = {},{}
+        for n in range (len(s)):
+            hmS[s[n]] = 1 + hmS.get(s[n],0)
+            hmT[t[n]] = 1 + hmT.get(t[n],0)
+        for c in hmS:
+            if hmS[c] != hmT.get(c,0):
                 return False
         return True
-          """  
+        
+        
+        
+        
+        
+#         if len(s) != len(t):
+#             return False
+#         countS, countT = {}, {}
+        
+#         for i in range (len(s)):
+#             countS[s[i]] = 1 + countS.get(s[i],0)
+#             countT[t[i]] = 1 + countT.get(t[i],0)
+#         for c in countS:
+#             if countS[c] != counT.get(c,0): 
+#                 return False
+#         return True
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        """
+        #Solution 1
+        #time and space complexity o(N) or o(s+t) since we are looping through both strings
+        if len(s) != len(t):  #base case to check if they have the same # in total
+            return False
+        
+        countS, countT = {},{} # Two hashmaps that can keep track of the count of var
+        
+        for i in range(len(s)):
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0) # can be done since same length
             
+        for c in countS:
+            if countS[c] != countT.get(c,0):
+                return False
+        
+        return True    
+    
+        #Solution 2 in an O(1) memory nothing really stored so you can sort and compare the only issue is time complexity can increase since sorting 
+        #return sorted(str(s))  == sorted(str(t))
+        
+        #Solution 3
+        #return Counter(s) == Counter(t) Fast one line solution data structure that is a hashmap that counts what was done exactly 
+         """
             
