@@ -5,6 +5,34 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
+        nums.sort()
+        for n in range(len(nums)-1):
+            if nums[n] == nums[n+1]:
+                return True
+        return False
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         """
         
         nums.sort()
@@ -17,11 +45,11 @@ class Solution(object):
         
         # More efficient code that is timeCO{O(n)} Space O(n)
                 #first sorted the array in order because I want to compare the values side by side
-        """
+        
         hashset = set()
         for n in nums:
             if n in hashset:
                 return True
             hashset.add(n)
         return False
-        
+        """
