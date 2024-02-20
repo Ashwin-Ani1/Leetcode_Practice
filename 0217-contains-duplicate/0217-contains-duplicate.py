@@ -5,12 +5,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
        """
-
-        nums.sort()
-        for n in range(len(nums)-1):
-            if nums[n] == nums[n+1]:
+        
+        hashsetT = set()
+        for n in nums:
+            if n in hashsetT:
                 return True
-        return False 
+            hashsetT.add(n)
+        return False
+    
     
         
         
