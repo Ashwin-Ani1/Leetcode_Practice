@@ -6,32 +6,34 @@ class Solution(object):
         :rtype: bool
         """
 
-        if len(s) != len(t):
-            return False 
-        hmS,hmT = {},{}
-        for n in range (len(s)):
-            hmS[s[n]] = 1 + hmS.get(s[n],0)
-            hmT[t[n]] = 1 + hmT.get(t[n],0)
-        for c in hmS:
-            if hmS[c] != hmT.get(c,0):
-                return False
-        return True
-        
-        
-        
-        
-        
 #         if len(s) != len(t):
 #             return False
 #         countS, countT = {}, {}
         
-#         for i in range (len(s)):
-#             countS[s[i]] = 1 + countS.get(s[i],0)
-#             countT[t[i]] = 1 + countT.get(t[i],0)
+#         for c in range(len(s)):
+#             countS[s[c]] = 1 + countS.get(s[c],0)
+#             countT[s[c]] = 1 + countT.get(t[c],0)
 #         for c in countS:
-#             if countS[c] != counT.get(c,0): 
+#             if countS[c] != countT.get(c,0):
 #                 return False
 #         return True
+
+        
+        
+        
+        
+        
+        if len(s) != len(t):
+            return False
+        countS, countT = {}, {}
+        
+        for i in range (len(s)):
+            countS[s[i]] = 1 + countS.get(s[i],0)
+            countT[t[i]] = 1 + countT.get(t[i],0)
+        for c in countS:
+            if countS[c] != countT.get(c,0): 
+                return False
+        return True
         
         
         
