@@ -5,7 +5,22 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        return sorted(str(t)) == sorted(str(s))
+        return sorted(s) == sorted(t)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
 #         #Solution 1
@@ -25,10 +40,10 @@ class Solution(object):
         
 #         return True    
     
-#         #Solution 2 in an O(1) memory nothing really stored so you can sort and compare the only issue is time complexity can increase since sorting 
-#         #return sorted(str(s))  == sorted(str(t))
+        #Solution 2 in an O(1) memory nothing really stored so you can sort and compare the only issue is time complexity can increase since sorting 
+        #return sorted(str(s))  == sorted(str(t))
         
-#         #Solution 3
-#         #return Counter(s) == Counter(t) Fast one line solution data structure that is a hashmap that counts what was done exactly 
-#          """
+        #Solution 3
+        #return Counter(s) == Counter(t) Fast one line solution data structure that is a hashmap that counts what was done exactly 
+         
             
