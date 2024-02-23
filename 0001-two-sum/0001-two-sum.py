@@ -5,7 +5,6 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """ 
-        
         hashMap = {}
         for i, n in enumerate(nums):
             diff = target - n
@@ -14,17 +13,7 @@ class Solution(object):
             hashMap[n] = i
         return 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
         
         
