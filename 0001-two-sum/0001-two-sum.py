@@ -12,7 +12,7 @@ class Solution(object):
             if diff in hashMap:
                 return [hashMap[diff],i]
             hashMap[n] = i
-        return
+        return 
         
         
         
