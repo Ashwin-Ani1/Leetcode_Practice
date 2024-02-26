@@ -5,7 +5,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        return Counter(s) == Counter(t)
+        return sorted(str(s)) == sorted(str(t))
         
         
         
