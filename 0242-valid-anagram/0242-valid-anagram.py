@@ -5,18 +5,13 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        return Counter(s) == Counter(t)
         
-        if len(s) != len(t):
-            return False
-        hashsetS,hashsetT = {},{}
-        for i in range (len(s)):
-            hashsetS[s[i]] = 1 + hashsetS.get(s[i],0)
-            hashsetT[t[i]] = 1 + hashsetT.get(t[i],0)
-        for n in hashsetS:
-            if hashsetS[n] != hashsetT.get(n,0):
-                return False
-        return True
-
+        
+        
+        
+        
+        
         
         
         
