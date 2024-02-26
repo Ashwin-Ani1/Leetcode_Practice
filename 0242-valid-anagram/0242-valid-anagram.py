@@ -5,7 +5,17 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        return sorted(str(s)) == sorted(str(t))
+        if len(s) != len(t):
+            return False
+        hashsetS,hashsetT = {},{}
+        for n in range (len(s)):
+            hashsetS[s[n]] = 1 + hashsetS.get(s[n],0)
+            hashsetT[t[n]] = 1 + hashsetT.get(t[n],0)
+        for n in hashsetS:
+            if hashsetS[n] != hashsetT.get(n,0):
+                return False
+        return True
+
         
         
         
